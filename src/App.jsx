@@ -1,7 +1,6 @@
 import { Routes ,Route } from "react-router-dom";
 import HomePage from "./Pages/HomePage.js";
 import "./App.css";
-import InitialSignup from "./Pages/InitialSignup.jsx";
 import LoginPage from "./Pages/LoginPage.js";
 import SignupPage from "./Pages/SignupPage.js";
 import AboutPage from "./Pages/AboutPage.js";
@@ -10,7 +9,7 @@ import Sponsors from "./Pages/Sponsors.js";
 import ContactUs from "./Pages/ContactusPage.js";
 import FAQPage from "./Pages/FAQsPage.js";
 import ForgetPasswordPage from "./Pages/ForgetPassword.js";
-import toast, { Toaster } from 'react-hot-toast';
+import  { Toaster } from 'react-hot-toast';
 import UpdatePasswordPage from "./Pages/UpdatePassword.js";
 import OTPPage from "./Pages/OTPPage.js";
 import DashboardSidebar from "./components/DashboardComponents/DashboardSidebar.jsx";
@@ -49,9 +48,6 @@ import { useContext } from "react";
 import { socketContext } from "./ContextApi/SocketContext.js";
 import { getRequiredRooms } from "./Services/operations/GetUserInformation.jsx";
 import LogoutModel from "./components/LogoutComponents/LogoutModel.jsx";
-import ExploreServices from "./Pages/ExploreServices.jsx";
-import SelectCollegeWithoutSignup from "./Pages/SelectCollegeWithoutSignup.jsx";
-import CollegeShopsWithoutLogin from "./Pages/CollegeShopsWithoutLogin.jsx";
 import SpecificCollegeShopWithoutLogin from "./Pages/SpecificCollegeShopWithoutLogin.jsx";
 
 function App() {
@@ -70,7 +66,7 @@ function App() {
      {  
         if(token)
         {
-          
+         
           socket = io( "https://easer-official-backend-production.up.railway.app" ,{transports:["websocket"]});  
           setSocket(socket);
           const userId = await dispatch(getUserId(token));
@@ -131,14 +127,6 @@ function App() {
                     </OpenRoute>}>
         </Route>
 
-
-        {/* <Route path="/signup" 
-              element={<OpenRoute>
-                          <InitialSignup/>
-                      </OpenRoute>
-        }>
-        </Route> */}
-
         <Route path="/success"
               element={<SuccessPage/>}>
         </Route>
@@ -156,8 +144,6 @@ function App() {
                       </OpenRoute>
               }>
         </Route>
-
-        <Route path="/services" element={<ExploreServices/>}></Route>
         
         <Route path="/update-password/:id" 
               element={<OpenRoute>
@@ -226,17 +212,6 @@ function App() {
       >
       </Route>
 
-      <Route path="/services/printing/select-college"
-             element={
-              <SelectCollegeWithoutSignup/>
-             }>
-      </Route>
-
-      <Route path="/services/printing/select-college/:id" 
-             element={
-              <CollegeShopsWithoutLogin/>
-             }>
-      </Route>
 
       <Route path="/signup/vendor" 
             element={

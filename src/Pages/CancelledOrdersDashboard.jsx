@@ -14,7 +14,7 @@ const CancelledOrdersDashboard = () => {
     const [cancelledOrders , setCancelledOrders] = useState([]);
     const [searchQuery ,setSearchQuery] = useState("");
     const token = useSelector((state) => state.auth.token);
-    const [loading , setLoading] = useState(false);
+    const [loading , setLoading] = useState(true);
     const role = useSelector(state => state.auth.role) ;
     const {socket , setSocket} = useContext(socketContext);
     const dispatch = useDispatch();

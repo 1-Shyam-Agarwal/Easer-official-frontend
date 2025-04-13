@@ -15,7 +15,7 @@ import toast from 'react-hot-toast';
 const OngoingOrders = (props) => {
 
     const[ongoingOrders , setOngoingOrders] = useState([]);
-    const[loading , setLoading]=useState(false);
+    const[loading , setLoading]=useState(true);
     const token = useSelector((state) => state.auth.token);
     const dispatch = useDispatch();
     const navigate = useNavigate();

@@ -8,6 +8,7 @@ import { useSelector } from 'react-redux';
 const PrintShopCard = ({ element , location}) => {
 
   const [isExpanded, setIsExpanded] = useState(false);
+  const role = useSelector((state)=>(state.auth.role));
   const navigate = useNavigate();
 
   return (
@@ -48,12 +49,21 @@ const PrintShopCard = ({ element , location}) => {
           )}
         </button>
 
-        <button
-          onClick={()=>{navigate(`${location.pathname}/${element.userId}`)}}
-          className="flex items-center gap-2 px-3 py-1.5 text-sm text-blue-600 hover:text-blue-700 hover:bg-blue-50 rounded-md transition-colors"
-        >
-          Place Order
-        </button>
+        {
+            role ==="user"?
+            (
+              <button
+              onClick={()=>{navigate(`${location.pathname}/${element.userId}`)}}
+              className="flex items-center gap-2 px-3 py-1.5 text-sm text-blue-600 hover:text-blue-700 hover:bg-blue-50 rounded-md transition-colors"
+              >
+                Place Order
+              </button>
+            )
+            :
+            (
+              <div></div>
+            )
+        }
 
         
         </div>

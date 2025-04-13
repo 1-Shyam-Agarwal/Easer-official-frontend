@@ -16,7 +16,7 @@ const OrderDashboard = () => {
   const[onGoingOrders , setOnGoingOrders] = useState([]);
   const [searchQuery , setSearchQuery] = useState("");
   const[isShopOpen , setIsShopOpen] = useState(false);
-  const[loading , setLoading] = useState(false);
+  const[loading , setLoading] = useState(true);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const location = useLocation();

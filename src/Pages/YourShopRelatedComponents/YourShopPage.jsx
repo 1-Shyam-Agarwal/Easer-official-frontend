@@ -10,7 +10,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 
 const YourShopPage = () => {
     const token = useSelector((state=>state.auth.token));
-    const[loading , setLoading] = useState(false);
+    const[loading , setLoading] = useState(true);
     const [filteredVendorsData, setFilteredVendorsData] = useState([]);
     const{socket,setSocket}=useContext(socketContext);
     const location = useLocation();

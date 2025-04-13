@@ -5,7 +5,7 @@ import { clearRole, clearRoomcode, clearToken } from '../../Slices/authSlice';
 import { clearUser } from '../../Slices/profileSlice';
 import { setShowModel } from "../../Slices/LogoutSlice";
 
-const { GET_FILTERED_VENDORS , GET_FILTERED_VENDORS_WITH_MINIMUM_DETAILS ,GET_FILTERED_VENDORS_WITHOUT_LOGGED_IN } = getVendorEndpoints;
+const { GET_FILTERED_VENDORS , GET_FILTERED_VENDORS_WITH_MINIMUM_DETAILS  } = getVendorEndpoints;
 
 
 export function getfilteredVendorsList(setFilteredVendorsData , token,setLoading,dispatch,navigate,socket,setSocket)
@@ -41,26 +41,6 @@ export function getfilteredVendorsList(setFilteredVendorsData , token,setLoading
         }
     }
     
-}
-
-export function getFilteredVendorsWithoutLogin(setVendors , setLoading , collegeId)
-{
-    
-    return async()=>
-    {   
-        try
-        {
-            setLoading(true);
-            const response = await apiConnector("POST" , GET_FILTERED_VENDORS_WITHOUT_LOGGED_IN  ,{collegeId});
-            setVendors(response?.data?.filteredVendors);
-            toast.success("Fetched successfully");
-        }catch(error)
-        {
-            toast.error(error.message);
-        }
-        setLoading(false);
-
-    }
 }
 
 export function getFilteredVendorsWithMinimumDetails(setLoading,setFilteredVendorsData , token ,dispatch , navigate, socket, setSocket)

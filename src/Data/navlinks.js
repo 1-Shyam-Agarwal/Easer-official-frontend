@@ -16,11 +16,6 @@ const NavLinks = [
     },
 
     {
-        title: "Explore Services",
-        path:"/services"
-    },
-
-    {
         title : "Become Vendor",
         path : "/become-vendor"
     },
