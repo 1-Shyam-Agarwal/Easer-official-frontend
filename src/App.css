@@ -1,0 +1,11 @@
+/* write your css here */
+
+
+.body , .html
+{
+    overflow-x: hidden;
+    box-sizing: border-box;
+    margin:0;
+    padding : 0
+}
+
