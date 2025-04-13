@@ -1,5 +1,5 @@
-const BASE_URL = "http://localhost:5000/api/v1"
-//https://easer-official-backend-production.up.railway.app/api/v1
+const BASE_URL = "https://easer-official-backend-production.up.railway.app/api/v1"
+
 
 // AUTH ENDPOINTS
 export const authEndpoints = {
