@@ -5,7 +5,7 @@ import {useNavigate} from "react-router-dom";
 import { useSelector } from 'react-redux';
 
 
-const PrintShopCard = ({ element , location}) => {
+const PrintShopCard = ({ element }) => {
 
   const [isExpanded, setIsExpanded] = useState(false);
   const role = useSelector((state)=>(state.auth.role));
@@ -53,7 +53,7 @@ const PrintShopCard = ({ element , location}) => {
             role ==="user"?
             (
               <button
-              onClick={()=>{navigate(`${location.pathname}/${element.userId}`)}}
+              onClick={()=>{navigate(`/dashboard/place-order/shop/${element?.userId}`)}}
               className="flex items-center gap-2 px-3 py-1.5 text-sm text-blue-600 hover:text-blue-700 hover:bg-blue-50 rounded-md transition-colors"
               >
                 Place Order

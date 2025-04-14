@@ -10,7 +10,7 @@ import { socketContext } from '../../ContextApi/SocketContext.js';
 const PlaceOrderSelection = () => {
   const token = useSelector((state) => state.auth.token);
   const [vendorId, setVendorId] = useState("");
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [filteredVendorsData, setFilteredVendorsData] = useState([]);
   const dispatch = useDispatch();
   const navigate = useNavigate();

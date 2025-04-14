@@ -67,6 +67,7 @@ function App() {
         if(token)
         {
          
+          
           socket = io( "https://easer-official-backend-production.up.railway.app" ,{transports:["websocket"]});  
           setSocket(socket);
           const userId = await dispatch(getUserId(token));

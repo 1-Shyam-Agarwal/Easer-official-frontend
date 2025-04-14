@@ -1,7 +1,6 @@
 const BASE_URL = "https://easer-official-backend-production.up.railway.app/api/v1"
 
 
-
 // AUTH ENDPOINTS
 export const authEndpoints = {
   RESETPASSTOKEN_API: BASE_URL+"/reset-password-token",

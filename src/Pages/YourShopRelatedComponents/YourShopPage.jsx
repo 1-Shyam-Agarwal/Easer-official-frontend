@@ -13,7 +13,6 @@ const YourShopPage = () => {
     const[loading , setLoading] = useState(true);
     const [filteredVendorsData, setFilteredVendorsData] = useState([]);
     const{socket,setSocket}=useContext(socketContext);
-    const location = useLocation();
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
@@ -53,7 +52,7 @@ const YourShopPage = () => {
                             {
                                 filteredVendorsData?.length!==0 ? (filteredVendorsData?.map((element,index) => {
                                 return (
-                                    <PrintShopCard element={element} token={token} key={index}/>
+                                    <PrintShopCard element={element} key={index}/>
                                 );
                                 }))
                                 :

@@ -16,7 +16,7 @@ const MyProfile = () => {
   const[user , setUser] = useState("");
   const dispatch = useDispatch();
   const token = useSelector((state)=>state.auth.token);
-  const[loading , setLoading] = useState(true);
+  const[loading , setLoading] = useState(false);
   const navigate = useNavigate();
   const {socket , setSocket} = useContext(socketContext);
 
