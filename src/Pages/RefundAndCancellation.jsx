@@ -55,7 +55,7 @@ const RefundAndCancellationPolicy = () => {
             4. Refund Process
             </h2>
             <p className="text-gray-700 mb-4">
-            No application is required for a refund; it will be processed automatically within 7-8 business days. If the refund is not received, you can directly contact the vendor you placed the order with. In case of any discrepancies, you can email us at easer@official.co.in.
+            No application is required for a refund; it will be processed automatically within 7-8 business days. If the refund is not received, you can directly contact the vendor you placed the order with. In case of any discrepancies, you can email us at <strong>easer.helpdesk.india@gmail.com.</strong>
             </p>
 
             <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">
@@ -70,7 +70,7 @@ const RefundAndCancellationPolicy = () => {
             6. Contact Information
             </h2>
             <ul className="list-disc pl-5 text-gray-700 mb-4">
-              <li>Email: <a href="mailto:official@easer.com" className='text-blue-500 underline'>official@easer.com</a></li>
+              <li>Email: <a href="mailto:easer.helpdesk.india@gmail.com" className='text-blue-500 underline'>easer.helpdesk.india@gmail.com</a></li>
               <li>Phone: +91 9311161298</li>
             </ul>
 

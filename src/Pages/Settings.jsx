@@ -7,7 +7,7 @@ import { getRole } from '../Services/operations/GetUserInformation';
 const Settings = () => {
 
     const role = useSelector(state => state.auth.role);
-    const [loading , setLoading] = useState(true);
+    const [loading , setLoading] = useState(false);
    
 
   return (

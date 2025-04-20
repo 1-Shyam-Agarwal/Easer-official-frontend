@@ -181,7 +181,7 @@ const PrivacyPolicy = () => {
                 For any questions or concerns, you can contact us at:
                 </p>
                 <ul className="list-none pl-0 text-base text-gray-800">
-                    <li>Email: <a href="mailto:official@easer.com" className='text-blue-500 underline'>official@easer.com</a></li>
+                    <li>Email: <a href="mailto:easer.helpdesk.india@gmail.com" className='text-blue-500 underline'>easer.helpdesk.india@gmail.com</a></li>
                     <li>Phone: +91 9311161298</li>
                 </ul>
             </section>

@@ -21,6 +21,11 @@ const NavLinks = [
     },
 
     {
+        title :"Pricing",
+        path : "/pricing"
+    },
+
+    {
         title : "Contact Us",
         path : "/contactus"
     },

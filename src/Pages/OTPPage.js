@@ -7,7 +7,7 @@ import { authEndpoints } from '../Services/apis';
 import { apiConnector } from '../Services/apiconnect';
 import toast from 'react-hot-toast';
 
-const OTPPage = () => {
+const OTPPage = (props) => {
   const [otp, setOtp] = useState(new Array(6).fill(''));
   const [timer, setTimer] = useState(30);
   const [resendEnabled, setResendEnabled] = useState(false);
@@ -76,7 +76,7 @@ const OTPPage = () => {
     e.preventDefault();
     const otpValue = otp.join('');
     if (otpValue?.length === 6) {
-      await dispatch(verifyOTP(otpValue, data, setVerifyOTPDisabled , navigate));
+      await dispatch(verifyOTP(otpValue, data, setVerifyOTPDisabled , navigate , props?.setShowOTPPage));
     }
   };
 

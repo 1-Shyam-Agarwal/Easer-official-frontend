@@ -81,7 +81,7 @@ const ShippingAndDeliveryPolicy = () => {
           For questions or assistance, please contact us:
         </p>
         <ul className="list-disc pl-5 text-gray-700 mb-4">
-          <li>Email: <a href="mailto:official@easer.com" className='text-blue-500 underline'>official@easer.com</a></li>
+          <li>Email: <a href="mailto:easer.helpdesk.india@gmail.com" className='text-blue-500 underline'>easer.helpdesk.india@gmail.com</a></li>
           <li>Phone: +91 9311161298</li>
         </ul>
 

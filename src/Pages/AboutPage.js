@@ -11,7 +11,7 @@ const About = () => {
       <div className="min-h-screen bg-white from-gray-50 to-white py-16 px-6 flex flex-col items-center">
         {/* Hero Section */}
         <motion.div
-          className="bg-white shadow-lg rounded-lg border-b-4 border-blue-500 flex flex-col items-center w-full md:w-4/5 lg:w-3/4 p-6"
+          className="bg-white shadow-lg rounded-[4px] border-b-4 border-blue-500 flex flex-col items-center w-full md:w-4/5 lg:w-3/4 p-6"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -26,14 +26,14 @@ const About = () => {
             <img
               src={creatorImage}
               alt="Shyam Agarwal"
-              className="w-48 h-48 object-cover rounded-full shadow-xl border-4 border-blue-500"
+              className="w-36 h-36 object-cover rounded-full shadow-xl border-4 border-blue-500"
             />
           </motion.div>
 
           {/* Text Section */}
           <div className=" flex flex-col  items-center text-center">
             <motion.h2
-              className="text-4xl font-semibold text-gray-900 mb-2"
+              className="text-3xl font-semibold text-gray-900 mb-2"
               initial={{ x: -100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 1, delay: 1 }}
@@ -41,7 +41,7 @@ const About = () => {
               Shyam Agarwal
             </motion.h2>
             <motion.p
-              className="text-gray-700 text-lg mb-4 italic "
+              className="text-gray-700 text-base mb-4 italic "
               initial={{ x: -100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 1, delay: 1.2 }}
@@ -72,9 +72,23 @@ const About = () => {
 
         {/* Sections */}
         <div className="w-full md:w-4/5 lg:w-3/4 mt-12 space-y-8">
+
+          {/* What we do*/}
+          <motion.div
+            className="bg-white p-6 shadow-lg rounded-[4px] border-l-4 border-blue-500"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 2 }}
+          >
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">What we do</h3>
+            <p className="text-gray-700 leading-relaxed">
+            Easer is an online printing platform designed to help students, educators, and professionals place printing orders remotely. Whether it's assignments, reports, or official documents, users can upload, customize, and get their documents printed without physically visiting a shop and get notification when it is done.
+            </p>
+          </motion.div> 
+
           {/* Vision Section */}
           <motion.div
-            className="bg-white p-6 shadow-lg rounded-lg border-l-4 border-blue-500"
+            className="bg-white p-6 shadow-lg rounded-[4px] border-l-4 border-blue-500"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1.5 }}
@@ -87,7 +101,7 @@ const About = () => {
 
           {/* Goal Section */}
           <motion.div
-            className="bg-white p-6 shadow-lg rounded-lg border-l-4 border-blue-500"
+            className="bg-white p-6 shadow-lg rounded-[4px] border-l-4 border-blue-500"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1.8 }}
@@ -100,7 +114,7 @@ const About = () => {
 
           {/* Future Plans Section */}
           <motion.div
-            className="bg-white p-6 shadow-lg rounded-lg border-l-4 border-blue-500"
+            className="bg-white p-6 shadow-lg rounded-[4px] border-l-4 border-blue-500"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 2 }}
@@ -124,7 +138,7 @@ const About = () => {
           </h3>
           <Link
             to="/signup"
-            className="bg-blue-500 text-white px-8 py-3 rounded-lg hover:bg-blue-600 transition duration-300 shadow-md"
+            className="bg-blue-500 text-white px-8 py-3 rounded-[4px] hover:bg-blue-600 transition duration-300 shadow-md"
           >
             Get Started
           </Link>

@@ -67,8 +67,8 @@ const PrivacyPolicy = () => {
               <li>Access, review, and request updates to the information we hold about you.</li>
               <li>Request deletion of your personal data from our systems, where applicable.</li>
               <li>Place print orders, review their status, and cancel or modify them before they are processed.</li>
-              <li>Contact us with any concerns about your data at 
-                <a href="mailto:official@easer.co.in" className="text-blue-500 underline"> official@easer.co.in</a>.
+              <li>Contact us with any concerns about your data at&nbsp; 
+                <a href="mailto:easer.helpdesk.india@gmail.com" className="text-blue-500 underline">easer.helpdesk.india@gmail.com</a>.
               </li>
               <li>For vendors, you have the right to process orders as they are received, modify them when necessary, or delete orders that are not viable or have been canceled by the user.</li>
               <li>As a vendor, you may request support for any issues related to order fulfillment or payment processing.</li>
@@ -84,8 +84,8 @@ const PrivacyPolicy = () => {
               <li>Request deletion of your personal data from our systems, where applicable.</li>
               <li>You have the right to process orders as they are received, modify them when necessary, or delete orders that are not viable or have been canceled by the user.</li>
               <li>You may request support for any issues related to order fulfillment or payment processing.</li>
-              <li>Contact us with any concerns about your data at 
-                <a href="mailto:official@easer.co.in" className="text-blue-500 underline"> official@easer.co.in</a>.
+              <li>Contact us with any concerns about your data at&nbsp;
+                <a href="mailto:easer.helpdesk.india@gmail.com" className="text-blue-500 underline">easer.helpdesk.india@gmail.com</a>.
               </li>
             </ul>
           </section>
@@ -107,8 +107,8 @@ const PrivacyPolicy = () => {
           <section>
             <h2 className="text-xl font-semibold mb-4">Contact Us</h2>
             <p>
-              If you have any questions or concerns about this Privacy Policy, please contact us at 
-              <a href="mailto:official@easer.co.in" className="text-blue-500 underline"> official@easer.co.in</a>.
+              If you have any questions or concerns about this Privacy Policy, please contact us at&nbsp;
+               <a href="mailto:easer.helpdesk.india@gmail.com" className="text-blue-500 underline">easer.helpdesk.india@gmail.com</a>.
             </p>
           </section>
         </main>

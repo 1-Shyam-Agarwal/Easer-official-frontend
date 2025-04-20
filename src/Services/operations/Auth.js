@@ -115,12 +115,11 @@ export function signUp(
 }
 
 
-export function verifyOTP(otpValue, data ,setVerifyOTPDisabled ,  navigate) {
+export function verifyOTP(otpValue, data ,setVerifyOTPDisabled ,  navigate , setShowOTPPage) {
   
   return async (dispatch) => {
     setVerifyOTPDisabled(true);
-    const toastId = toast.dismiss("Verfying...");
-    console.log("sdkjsjkld");
+    const toastId = toast.loading("Verfying...");
 
     try {
       // Make the API call to verify OTP
@@ -141,11 +140,12 @@ export function verifyOTP(otpValue, data ,setVerifyOTPDisabled ,  navigate) {
       }
       else if(data?.role ==="vendor")
       {
-          const accountResponse = await apiConnector( "POST" , CREATE_VENDOR_ACCOUNT_API ,data);
+          setShowOTPPage(false);
+          // const accountResponse = await apiConnector( "POST" , CREATE_VENDOR_ACCOUNT_API ,data);
           toast.dismiss(toastId);
-          toast.success("Account is created Successfully");
-          navigate("/login");
-          dispatch(setAccount(""));
+          toast.success("Application submitted successfully.");
+          // navigate("/login");
+          // dispatch(setAccount(""));
           
       }
 
@@ -155,7 +155,7 @@ export function verifyOTP(otpValue, data ,setVerifyOTPDisabled ,  navigate) {
     }
 
     
-    dispatch(setVerifyOTPDisabled(false));
+    setVerifyOTPDisabled(false);
   };
 }
 
@@ -218,7 +218,8 @@ export function validatingVendorInfo(
             dispatch,
             navigate,
             setCreateAccountEnabled,
-            setLoading
+            setLoading,
+            setShowSignupPage
           )
 {
   return async(dispatch)=>
@@ -244,13 +245,13 @@ export function validatingVendorInfo(
       dispatch(setAccount(data));
       toast.success("OTP is sent successfully")
       setCreateAccountEnabled(true);
-      navigate("/otp" , {replace:true})
+      setShowSignupPage(false);
 
     }catch(error)
     {
       toast.error(error?.response?.data?.message || "Unable to send OTP. Please try again later.");
       setCreateAccountEnabled(true);
-      navigate(`/signup/vendor`)
+      navigate(-1);
     }
     setLoading(false);
   }
@@ -355,7 +356,9 @@ export function validateEmailAtLogin(email , setDisable , setData , setWindowSwi
                toast.dismiss(toastId);
             }
             setWindowSwitch(true);
-            setData(response?.data?.data);
+            const data = {...response?.data?.data , "email" : email};
+            setData(data);
+
         }catch(error)
         {
             toast.dismiss(toastId);

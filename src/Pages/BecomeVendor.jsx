@@ -7,10 +7,10 @@ const BecomeVendor = () => {
     <div>
         <div className="min-h-screen bg-gray-50 py-8 px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-                  <h1 className="text-3xl font-normal text-blue-500 mb-2">
+                  <h1 className="text-3xl font-normal text-black mb-2">
                   Become a Vendor on Easer
                 </h1>
-                <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                <p className="text-sm text-gray-600 max-w-2xl mx-auto">
                   Join our platform to connect with students and provide essential printing services.
                 </p>
               </div>
@@ -22,7 +22,7 @@ const BecomeVendor = () => {
                 {steps.map((step, index) => (
                   <div 
                     key={index}
-                    className="relative flex flex-col sm:flex-row items-start gap-4 p-6 bg-white rounded-[2px] border border-gray-100 hover:border-blue-100 hover:shadow-md transition-all"
+                    className="relative flex flex-col sm:flex-row items-start gap-4 p-6 bg-white rounded-[2px] border border-gray-200 hover:border-blue-100 hover:shadow-md transition-all"
                   >
                     <div className="flex-shrink-0">
                       <div className="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-semibold">
@@ -75,8 +75,8 @@ const BecomeVendor = () => {
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="flex items-center gap-3">
                     <Mail className="w-5 h-5 text-blue-600" />
-                    <a href="mailto:official@easer.co.in" className="text-blue-600 hover:underline">
-                      official@easer.co.in
+                    <a href="mailto:easer.helpdesk.india@gmail.com" className="text-blue-600 hover:underline">
+                    easer.helpdesk.india@gmail.com
                     </a>
                   </div>
                   <div className="flex items-center gap-3">
@@ -112,11 +112,11 @@ const BecomeVendor = () => {
 const steps = [
   {
     title: "Visit Our Website",
-    description: "Navigate to our website and locate the Sign Up button in the top-right corner of the navigation bar.",
+    description: "Navigate to our website and locate the Pricing button in the middle part of the navigation bar.",
   },
   {
-    title: "Choose Vendor Account",
-    description: "Select Create Vendor Account from the registration options to begin the process.",
+    title: "Choose a plan",
+    description: "Select a plan that suits your business the most.",
   },
   {
     title: "Fill Out the Registration Form",
@@ -125,7 +125,7 @@ const steps = [
       "Personal Information: Your name, email, contact number and college ",
       "Vendor Details: Shop details, pricing schema, fine schema and waiting time",
       "Mobile Number: For updates",
-      "Merchant ID and Salt Key: Write it carefully otherwise you will not receive your payment.",
+      "x-client-id and x-client-secret: Write it carefully otherwise you will not receive your payment.",
     ],
   },
   {
@@ -134,13 +134,13 @@ const steps = [
   },
   {
     title: "Account Approval",
-    description: "Wait for our team to review and approve your application. You'll receive a confirmation email upon activation.",
+    description: "Please wait for our team to review and approve your application. During this process, we may contact you, so stay tuned. You will receive a confirmation email once your account is activated.",
   },
 ];
 
 const tips = [
   "Double-check your mobile number to ensure you don't miss important updates ",
-  "Verify the Merchant ID and Salt Key carefully to avoid payment processing issues.",
+  "Verify the x-client-id and x-client-secret carefully to avoid payment processing issues.",
   "Provide accurate shop details to get quick approval from us and it also helps students to locate your shop easily.",
 ];
 

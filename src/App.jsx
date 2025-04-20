@@ -49,6 +49,7 @@ import { socketContext } from "./ContextApi/SocketContext.js";
 import { getRequiredRooms } from "./Services/operations/GetUserInformation.jsx";
 import LogoutModel from "./components/LogoutComponents/LogoutModel.jsx";
 import SpecificCollegeShopWithoutLogin from "./Pages/SpecificCollegeShopWithoutLogin.jsx";
+import VendorPricingPage from "./Pages/Pricing.jsx"
 
 function App() {
 
@@ -68,7 +69,7 @@ function App() {
         {
          
           
-          socket = io( "https://easer-official-backend-production.up.railway.app" ,{transports:["websocket"]});  
+          socket = io( "http://localhost:5000" ,{transports:["websocket"]});  
           setSocket(socket);
           const userId = await dispatch(getUserId(token));
          
@@ -131,6 +132,12 @@ function App() {
         <Route path="/success"
               element={<SuccessPage/>}>
         </Route>
+
+        <Route path="/pricing"
+              element={<VendorPricingPage/>}>
+        </Route>
+
+
 
 
         <Route path="/about" element={<AboutPage/>}></Route>
@@ -214,7 +221,7 @@ function App() {
       </Route>
 
 
-      <Route path="/signup/vendor" 
+      <Route path="/signup/vendor/:id" 
             element={
               <OpenRoute>
                 <VendorSignup/>
