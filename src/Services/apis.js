@@ -1,4 +1,4 @@
-const BASE_URL = "easer-official-backend-production.up.railway.app/api/v1"
+const BASE_URL = "https://easer-official-backend-production.up.railway.app/api/v1"
 
 
 // AUTH ENDPOINTS
