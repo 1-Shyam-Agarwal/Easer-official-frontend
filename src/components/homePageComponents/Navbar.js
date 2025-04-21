@@ -160,7 +160,7 @@ const Navbar = () => {
     <nav className={`bg-white w-full backdrop-blur-sm bg-white/90 sticky top-0 z-50 transition-all duration-300 ${token ? "border-b border-gray-200" : "shadow-sm"}`}>
       <div className="flex mx-[20px] max-w-maxContent mx-auto justify-between items-center py-4">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-[15px] md:gap-4 group max-1100:gap-3 max-870:gap-2">
+        <Link to="/" className="flex items-center gap-[15px] md:gap-4 group max-870:ml-[1.2rem] max-1100:gap-3 max-870:gap-2 mx-[1.5rem]">
           <img src={krishna_footprints} alt="Easer" className="w-10 h-10 max-1100:w-8 max-1100:h-8 max-870:w-6 max-870:h-6 transition-transform group-hover:scale-110"/>
           <div className="text-xl max-1100:text-lg max-870:text-base font-semibold text-black ">
             <span className="text-black specialCharacter">E</span>aser
@@ -168,7 +168,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-8 max-1100:gap-6 max-870:gap-5">
+        <div className="hidden md:flex items-center gap-8 max-1100:gap-6 max-870:gap-[1.2rem]">
           {location.pathname.split("/")[1] !== "dashboard" && 
             NavLinks.map((entry, index) => (
               <Link 
@@ -196,7 +196,7 @@ const Navbar = () => {
           
           {/* Desktop Auth Buttons */}
           {token === null && (
-            <div className="hidden md:flex items-center gap-4 max-1100:gap-3">
+            <div className="hidden md:flex items-center gap-4 max-1100:gap-3 max-870:gap-0">
               <Link 
                 to="/signup/user" 
                 className="px-6 py-2 text-blue-600 hover:text-blue-700 max-1100:text-[0.85rem] max-1100:py-2 max-1100:px-4 max-870:text-[0.8rem] font-medium transition-colors"
@@ -205,7 +205,7 @@ const Navbar = () => {
               </Link>
               <Link 
                 to="/login" 
-                className="px-6 py-2 bg-blue-600 text-white rounded-full 0 max-1100:text-[0.85rem] max-1100:py-2 max-1100:px-4 hover:bg-blue-700 font-medium transition-colors shadow-sm hover:shadow-md"
+                className="px-6 py-2 mr-[1.5rem] max-870:mr-[1.2rem] bg-blue-600 text-white rounded-full 0 max-870:text-[0.8rem] max-870:px-4 max-870:py-2 max-1100:text-[0.85rem] max-1100:py-2 max-1100:px-4 hover:bg-blue-700 font-medium transition-colors shadow-sm hover:shadow-md"
               >
                 Login
               </Link>
@@ -214,7 +214,7 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden p-2 hover:bg-gray-100 rounded-full transition-colors"
+            className="md:hidden p-2 mr-[10px] hover:bg-gray-100 rounded-full transition-colors"
             onClick={toggleMenu}
             aria-label="Toggle menu"
           >

@@ -74,7 +74,7 @@ const VendorPricingPage = () => {
 
   return (
     <div>
-      <div className="bg-white py-12 px-4 sm:px-6 lg:px-8 mb-[16px]">
+      <div className="bg-gray-50 py-12 px-4 sm:px-6 lg:px-8 mb-[16px]">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl font-normal text-gray-900">Vendor Pricing Plans</h2>
           <p className="mt-2 text-md text-gray-600">
