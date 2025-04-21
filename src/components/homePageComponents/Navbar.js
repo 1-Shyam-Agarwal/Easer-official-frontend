@@ -190,7 +190,7 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Auth Buttons and Mobile Controls */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 mx-[1.5rem]">
           {/* Profile Dropdown - Visible on all screen sizes */}
           {token!==null && <ProfileDropDown image={user}/>}
           
@@ -214,7 +214,7 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden p-2 mr-[10px] hover:bg-gray-100 rounded-full transition-colors"
+            className="md:hidden p-1 hover:bg-gray-100 rounded-full transition-colors"
             onClick={toggleMenu}
             aria-label="Toggle menu"
           >
