@@ -27,7 +27,7 @@ const HeroSection = () => {
 
             <div className="flex max-870:justify-center justify-start">
               <Link 
-                to="/signup"
+                to="/signup/user"
                 className="bg-gray-900 text-white px-8 py-3 rounded-full text-lg hover:bg-gray-800 transition-colors"
               >
                 Explore More
