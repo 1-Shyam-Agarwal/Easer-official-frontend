@@ -20,6 +20,7 @@ const {
     GOOGLE_SIGNUP,
     VALIDATE_VENDOR_INFO,
     CREATE_VENDOR_ACCOUNT_API,
+    CREATE_REQUEST_FOR_VENDOR_ACCOUNT_API,
     EMAIL_VALIDATION_AT_LOGIN
 } = authEndpoints ;
 
@@ -140,8 +141,9 @@ export function verifyOTP(otpValue, data ,setVerifyOTPDisabled ,  navigate , set
       }
       else if(data?.role ==="vendor")
       {
+          
+          const accountResponse = await apiConnector( "POST" , CREATE_REQUEST_FOR_VENDOR_ACCOUNT_API ,data);
           setShowOTPPage(false);
-          // const accountResponse = await apiConnector( "POST" , CREATE_VENDOR_ACCOUNT_API ,data);
           toast.dismiss(toastId);
           toast.success("Application submitted successfully.");
           // navigate("/login");

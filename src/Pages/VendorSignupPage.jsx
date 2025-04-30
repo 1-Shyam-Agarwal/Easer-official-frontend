@@ -45,11 +45,16 @@ const VendorSignup = ()=>
 {
 
     const [collegeData, setCollegeData] = useState([]);
+
     const [priceSchema , setPriceSchema] = useState([]); 
     const [singlePriceScheme , setSinglePriceScheme] = useState(null);
+
     const [showPassword, setShowPassword] = useState(false);
+
     const [showPriceModel , setShowPriceModel] = useState(false);
+
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+
     const [createAccountEnabled , setCreateAccountEnabled] = useState(true);
     const [showSignupPage , setShowSignupPage] = useState(true);
     const [showOTPPage , setShowOTPPage] = useState(true);
@@ -81,9 +86,9 @@ const VendorSignup = ()=>
           shopLandMark : "",
           fineEnforcementTimeInMinutes :10,
           fineRatePerMinute:0,
-          waitingTime : 10,
-          merchantId : "",
-          saltKey:""
+          // waitingTime : 10,
+          // merchantId : "",
+          // saltKey:""
         }
       });
 
@@ -442,7 +447,7 @@ const VendorSignup = ()=>
                               </section>
               
                               {/* Payment Gateway Details Section */}
-                              <section className="space-y-6">
+                              {/* <section className="space-y-6">
                                 <h3 className="text-lg font-normal text-blue-700 border-gray-700 mt-[50px] border-b pb-2">Payment Gateway Details ( Accept only Cashfree issued credentials )</h3>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               
@@ -483,10 +488,10 @@ const VendorSignup = ()=>
                                       </p>
                                     </div>
                                 )}
-                              </section>
+                              </section> */}
               
                               {/* Fine Details Section */}
-                              <section className="space-y-6">
+                              {/* <section className="space-y-6">
                                 <h3 className="text-lg font-normal text-blue-700 border-gray-700 mt-[50px] border-b pb-2">Waiting Details</h3>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               
@@ -511,7 +516,7 @@ const VendorSignup = ()=>
                                 </div>
               
                                 </div>
-                              </section>
+                              </section> */}
               
               
                               {/* Password Details */}

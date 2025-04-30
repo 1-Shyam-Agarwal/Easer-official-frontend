@@ -323,25 +323,36 @@ const MyProfile = () => {
                         
 
                         {/* Quick Actions */}
-                        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                          {actions.map(({ name, icon: Icon, path, color, bgColor }) => (
-                            <NavLink
-                              key={name}
-                              to={path}
-                              className={({ isActive }) => `
-                                p-4 bg-white rounded-md shadow-lg hover:shadow-xl 
-                                transition-all duration-200 flex flex-col items-center 
-                                justify-center space-y-2 group
-                                ${isActive ? 'ring-2 ring-blue-500 shadow-md' : ''}
-                              `}
-                            >
-                              <div className={`p-2 ${bgColor} rounded-md group-hover:scale-110 transition-transform duration-200`}>
-                                <Icon className={`w-5 h-5 ${color}`} />
-                              </div>
-                              <span className="text-sm font-normal text-gray-700 text-center">{name}</span>
-                            </NavLink>
-                          ))}
-                        </div>
+
+                        {
+                           user?.role !== "admin" ? 
+                           (
+                                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                                {actions.map(({ name, icon: Icon, path, color, bgColor }) => (
+                                  <NavLink
+                                    key={name}
+                                    to={path}
+                                    className={({ isActive }) => `
+                                      p-4 bg-white rounded-md shadow-lg hover:shadow-xl 
+                                      transition-all duration-200 flex flex-col items-center 
+                                      justify-center space-y-2 group
+                                      ${isActive ? 'ring-2 ring-blue-500 shadow-md' : ''}
+                                    `}
+                                  >
+                                    <div className={`p-2 ${bgColor} rounded-md group-hover:scale-110 transition-transform duration-200`}>
+                                      <Icon className={`w-5 h-5 ${color}`} />
+                                    </div>
+                                    <span className="text-sm font-normal text-gray-700 text-center">{name}</span>
+                                  </NavLink>
+                                ))}
+                                </div>
+                           )
+                           :
+                           (
+                              <div></div>
+                           )
+                        }
+                        
                       </div>
                     </div>
                   </div>

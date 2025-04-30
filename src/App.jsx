@@ -50,6 +50,7 @@ import { getRequiredRooms } from "./Services/operations/GetUserInformation.jsx";
 import LogoutModel from "./components/LogoutComponents/LogoutModel.jsx";
 import SpecificCollegeShopWithoutLogin from "./Pages/SpecificCollegeShopWithoutLogin.jsx";
 import VendorPricingPage from "./Pages/Pricing.jsx";
+import AddVendorPage from "./Pages/AddVendorPage.jsx";
 
 
 function App() {
@@ -69,7 +70,7 @@ function App() {
         if(token)
         {
          
-          
+          //https://easer-official-backend-production.up.railway.app
           socket = io( "https://easer-official-backend-production.up.railway.app" ,{transports:["websocket"]});  
           setSocket(socket);
           const userId = await dispatch(getUserId(token));
@@ -314,7 +315,7 @@ function App() {
             element={
               <ProtectedRoute>
                 <DashboardTemplate>
-                  {/* AddVendorPage or relevant content */}
+                  <AddVendorPage/>
                 </DashboardTemplate>
               </ProtectedRoute>
             }

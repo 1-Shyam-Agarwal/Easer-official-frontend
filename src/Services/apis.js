@@ -1,6 +1,7 @@
 const BASE_URL = "https://easer-official-backend-production.up.railway.app/api/v1"
 
 
+
 // AUTH ENDPOINTS
 export const authEndpoints = {
   RESETPASSTOKEN_API: BASE_URL+"/reset-password-token",
@@ -12,6 +13,7 @@ export const authEndpoints = {
   CREATE_ACCOUNT_API : BASE_URL+"/create-account",
   VALIDATE_VENDOR_INFO : BASE_URL+"/validate-vendor-info",
   CREATE_VENDOR_ACCOUNT_API : BASE_URL+"/create-vendor-account",
+  CREATE_REQUEST_FOR_VENDOR_ACCOUNT_API : BASE_URL + "/create-request-for-vendor",
   GOOGLE_SIGNUP_INFO_EXTRACTION : BASE_URL + "/google-signup-information-extraction",
   GOOGLE_SIGNUP : BASE_URL + "/google-signup",
   EMAIL_VALIDATION_AT_LOGIN : BASE_URL + "/email-validation-at-login"
@@ -35,7 +37,8 @@ export const collegeDetailsEndpoints = {
 
 export const getVendorEndpoints = {
   GET_FILTERED_VENDORS : BASE_URL+"/get-filtered-vendors",
-  GET_FILTERED_VENDORS_WITH_MINIMUM_DETAILS : BASE_URL+"/get-filtered-vendors-with-minimum-details"
+  GET_FILTERED_VENDORS_WITH_MINIMUM_DETAILS : BASE_URL+"/get-filtered-vendors-with-minimum-details",
+  GET_VENDOR_REQUESTS : BASE_URL + "/get-vendor-requests"
 }
 
 export const printOrderVendorEndpoints = {

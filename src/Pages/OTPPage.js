@@ -88,7 +88,8 @@ const OTPPage = (props) => {
     {
        
        const response = await apiConnector("POST" , authEndpoints?.OTP_API , {
-        email : data?.email
+        email : data?.email,
+        type : "signup"
        })
        
        setResendOTPDisabled(false);
