@@ -5,10 +5,10 @@ const NavLinks = [
         path : "/"
     },
 
-    {
-        title : "About",
-        path : "/about"
-    },
+    // {
+    //     title : "About",
+    //     path : "/about"
+    // },
 
     {
         title : "Sponsors",
