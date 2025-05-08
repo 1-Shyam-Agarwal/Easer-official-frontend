@@ -71,7 +71,7 @@ function App() {
         {
          
           //https://easer-official-backend-production.up.railway.app
-          socket = io( "https://easer-official-backend-production.up.railway.app" ,{transports:["websocket"]});  
+          socket = io( "http://localhost:5000" ,{transports:["websocket"]});  
           setSocket(socket);
           const userId = await dispatch(getUserId(token));
          
@@ -142,7 +142,7 @@ function App() {
 
 
 
-        <Route path="/about" element={<AboutPage/>}></Route>
+        {/* <Route path="/about" element={<AboutPage/>}></Route> */}
         <Route path="/sponsors" element={<Sponsors/>}></Route>
         <Route path="/contactus" element={<ContactUs/>}></Route>
         <Route path="/FAQs" element={<FAQPage/>}></Route>
