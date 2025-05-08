@@ -142,7 +142,7 @@ function App() {
 
 
 
-        {/* <Route path="/about" element={<AboutPage/>}></Route> */}
+        <Route path="/about" element={<AboutPage/>}></Route>
         <Route path="/sponsors" element={<Sponsors/>}></Route>
         <Route path="/contactus" element={<ContactUs/>}></Route>
         <Route path="/FAQs" element={<FAQPage/>}></Route>
