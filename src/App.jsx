@@ -70,8 +70,8 @@ function App() {
         if(token)
         {
          
-          //https://easer-official-backend-production.up.railway.app
-          socket = io( "http://localhost:5000" ,{transports:["websocket"]});  
+          
+          socket = io( "https://easer-official-backend-production.up.railway.app" ,{transports:["websocket"]});  
           setSocket(socket);
           const userId = await dispatch(getUserId(token));
          
